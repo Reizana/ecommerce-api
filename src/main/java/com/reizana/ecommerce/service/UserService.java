@@ -22,7 +22,7 @@ public class UserService {
     }
 
     public void addUsersInfo(@RequestBody User user) {
-        //FIXME: Corrigirlakdasdjkaspojd
+        //FIXME: Corrigir post não esta funcionando da maneira que deveria
         userRepository.save(user);
     }
 }
