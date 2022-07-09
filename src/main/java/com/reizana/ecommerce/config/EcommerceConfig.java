@@ -22,7 +22,6 @@ public class EcommerceConfig {
         return args -> {
             User reizan = new User(
                     "Reizan",
-                    "qwertyui",
                     "general lima 500",
                     "visa debit-card",
                     "headset tune710bt"
@@ -41,7 +40,6 @@ public class EcommerceConfig {
             );
             User felipe = new User(
                     "Felipe",
-                    "qwertyui",
                     "general lima 500",
                     "visa credit-card",
                     "sand-cat"

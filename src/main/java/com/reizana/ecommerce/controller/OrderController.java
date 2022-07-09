@@ -24,12 +24,25 @@ public class OrderController {
         return orderService.findAll();
     }
 
-    @GetMapping("{orderId}")
-    public List<View> findAllOrdersById(@PathVariable("orderId")Integer orderId) {
-        return orderService.findAllOrdersById(orderId);
-    }
     @PostMapping
     public void addOrdersInfo(@RequestBody Order order) {
         orderService.addOrdersInfo(order);
+    }
+
+    @PutMapping(path = "{orderId}")
+    public void updateOrders(
+            @PathVariable("orderId") Integer orderId,
+            @RequestParam(required = false) String orderStatus,
+            @RequestParam(required = false) String orderItems,
+            @RequestParam(required = false) String orderAdress,
+            @RequestParam(required = false) String orderPaymentInfo,
+            @RequestParam(required = false) String orderShippingInfo) {
+        orderService.updateOrders(orderId, orderStatus, orderItems,
+                                        orderAdress, orderPaymentInfo, orderShippingInfo);
+
+    }
+    @DeleteMapping(path = "{orderId}")
+    public void deleteOrder(@PathVariable("orderId") Integer orderId) {
+        orderService.deleteOrder(orderId);
     }
 }

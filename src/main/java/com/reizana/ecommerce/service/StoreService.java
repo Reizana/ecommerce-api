@@ -4,7 +4,9 @@ import com.reizana.ecommerce.Store;
 import com.reizana.ecommerce.repository.StoreRepository;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -28,5 +30,9 @@ public class StoreService {
             throw new IllegalStateException("Product already exist");
         }
         storeRepository.save(store);
+    }
+
+    public void deleteStore(Integer storeId) {
+        storeRepository.deleteById(storeId);
     }
 }
