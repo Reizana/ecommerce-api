@@ -1,24 +1,22 @@
 package com.reizana.ecommerce.controller;
 
-import com.reizana.ecommerce.Store;
+import com.reizana.ecommerce.controller.dto.ProductDto;
+import com.reizana.ecommerce.controller.dto.StoreDto;
+import com.reizana.ecommerce.domain.Product;
+import com.reizana.ecommerce.domain.Store;
 import com.reizana.ecommerce.service.StoreService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
-import java.util.Optional;
 
-@RequestMapping(path = "stores")
 @RestController
+@RequestMapping(path = "stores")
+@RequiredArgsConstructor
 public class StoreController {
 
     private final StoreService storeService;
-
-    @Autowired
-    public StoreController(StoreService storeService) {
-        this.storeService = storeService;
-    }
 
     @GetMapping
     public List<Store> storeList() {
@@ -26,8 +24,13 @@ public class StoreController {
     }
 
     @PostMapping
-    public void addProduct(@RequestBody Store store) {
-        storeService.addProduct(store);
+    public ResponseEntity<Store> addStore(@RequestBody StoreDto store) {
+        return ResponseEntity.ok(storeService.addStore(store));
+    }
+
+    @PostMapping("{idStore}/products")
+    public ResponseEntity<Product> addProduct(@PathVariable Integer idStore, @RequestBody ProductDto product) {
+        return ResponseEntity.ok(storeService.addProduct(idStore, product));
     }
 
     @DeleteMapping(path = "{storeId}")
