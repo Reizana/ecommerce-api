@@ -28,8 +28,7 @@ public class UserService {
         return view;
     }
 
-    public void addUsersInfo(@RequestBody User user) {
-        //FIXME: Corrigir post não esta funcionando da maneira que deveria
+    public void addUsersInfo(User user) {
         userRepository.save(user);
     }
 

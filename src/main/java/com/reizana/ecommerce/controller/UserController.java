@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping
-    public void addUsersInfo(User user) {
+    public void addUsersInfo(@RequestBody User user) {
         userService.addUsersInfo(user);
     }
 
