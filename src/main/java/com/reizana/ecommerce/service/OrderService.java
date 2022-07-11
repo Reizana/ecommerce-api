@@ -1,7 +1,6 @@
 package com.reizana.ecommerce.service;
 
-import com.reizana.ecommerce.Order;
-import com.reizana.ecommerce.View;
+import com.reizana.ecommerce.domain.Order;
 import com.reizana.ecommerce.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 

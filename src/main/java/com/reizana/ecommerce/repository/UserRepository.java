@@ -1,6 +1,6 @@
 package com.reizana.ecommerce.repository;
 
-import com.reizana.ecommerce.User;
+import com.reizana.ecommerce.domain.User;
 import com.reizana.ecommerce.View;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

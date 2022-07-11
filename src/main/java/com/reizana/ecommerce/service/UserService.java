@@ -1,10 +1,9 @@
 package com.reizana.ecommerce.service;
 
-import com.reizana.ecommerce.User;
+import com.reizana.ecommerce.domain.User;
 import com.reizana.ecommerce.View;
 import com.reizana.ecommerce.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.transaction.Transactional;
 import java.util.List;

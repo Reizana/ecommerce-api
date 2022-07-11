@@ -1,6 +1,6 @@
 package com.reizana.ecommerce.controller;
 
-import com.reizana.ecommerce.User;
+import com.reizana.ecommerce.domain.User;
 import com.reizana.ecommerce.View;
 import com.reizana.ecommerce.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

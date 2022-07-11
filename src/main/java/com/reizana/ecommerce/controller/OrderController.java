@@ -1,7 +1,6 @@
 package com.reizana.ecommerce.controller;
 
-import com.reizana.ecommerce.Order;
-import com.reizana.ecommerce.View;
+import com.reizana.ecommerce.domain.Order;
 import com.reizana.ecommerce.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package com.reizana.ecommerce.repository;
 
-import com.reizana.ecommerce.Order;
+import com.reizana.ecommerce.domain.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
